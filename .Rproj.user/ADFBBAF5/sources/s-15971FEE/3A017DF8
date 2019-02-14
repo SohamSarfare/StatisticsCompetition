@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1550125260032.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "3A017DF8",
+    "lastKnownWriteTime" : 1550125138,
+    "last_content_update" : 1550125325509,
+    "path" : "D:/EXam/Ruia/Statistics/Competition/Competition/script.R",
+    "project_path" : "script.R",
+    "properties" : {
+        "cursorPosition" : "224,18",
+        "scrollLine" : "204"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
