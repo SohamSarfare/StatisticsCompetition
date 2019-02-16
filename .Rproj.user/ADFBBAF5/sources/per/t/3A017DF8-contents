@@ -104,6 +104,11 @@ intensityTable = table(intensity$play, intensity$sport)
 
 wilcox.test(data$On.a.scale.of.1.10..how.much.time.would.you.say.that.you.used.to.invest.in.sports.5.years.back.as.compared.to.now..Current.time.being.a.5., 
             mu= 5)
+jpeg("Following.jpg")
+boxplot(data$On.a.scale.of.1.10..how.much.time.would.you.say.that.you.used.to.invest.in.sports.5.years.back.as.compared.to.now..Current.time.being.a.5.,
+        las=1, main="Boxplot of following", 
+        ylim=c(0,10), col=c('chocolate1'))
+dev.off()
 
 #Loss Or Gain in Interest
 
@@ -167,10 +172,12 @@ dev.off()
 
 reasonTable = table(data[data$If.it.has.decreased..what.would.the.reason.be.. !='',10])
 View(reasonTable)
-op <- par(mar = c(10,4,4,2) + 0.1)
+jpeg("Reasons for Drop in following.jpg")
 barplot(reasonTable, main="Reasons for drop in Following", col=c('coral4','cadetblue3',"chartreuse3","chocolate1",'burlywood4'),
-        las=1,legend.text = T)
-par(op)
+        las=1, names=c("","","","",""))
+legend(x="topleft", c("","All the Above","Favourite Player/Team Retired","Less time at hand","Lost interest in sport"),
+       fill=c('coral4','cadetblue3',"chartreuse3","chocolate1",'burlywood4'))
+dev.off()
 #Which direction is the change in
 
 # i=1
@@ -222,4 +229,4 @@ presentData = preTestData$On.a.scale.of.1.10.how.would.you.rate.it.now..
          ylim=c(0,12), col=c('chocolate1','cadetblue3'))
  dev.off()
  
-wilcox.test(initialData,presentData,paired=T, alternative = "greater", mu=5)
+wilcox.test(initialData,presentData,paired=T, alternative = "greater")
